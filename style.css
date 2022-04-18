@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-image: url("./Assets/background-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}   
+
+header {
+    color: white;
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    padding: 1vh 0 1vh 0;
+    display: block;
+    margin: auto;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 40%;
+    padding: 2vh 2vw 2vh 2vw;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    border: solid black 2px;
+    font-size: 1.5em;
+    box-shadow: -5px -5px 5px rgba(0,0,0,0.5);
+    margin-top: 32px;
+}
+
+#name, #email, #number {
+    width: 100%;
+    height: 2.5vh;
+    size: 2em;
+    padding: 5px 0 5px 0;
+    margin: 5px 0 5px 0;
+}
+
+#dropdown {
+    height: 4vh;
+    width: 100%;
+    size: 2em;
+    padding: 5px 0 5px 0;
+}
+
+textarea {
+    width: 100%;
+    font-size: 0.75em;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+}
+
+option {
+    font-size: 1.25em;
+    background-color: rgba(255, 255, 255, 0.375);
+}
+
+#submit {
+    background-color: rgb(255, 124, 124);
+    font-size: 1rem;
+    border: 2px black solid;
+    width: 100%;
+    padding: 1vh 1vw 1vh 1vw;
+    border-radius: 10px;
+    margin: 5px 0 5px 0;
+    display: block;
+    margin: auto;
+    box-shadow: -5px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.5s ease-out;
+    color: black;
+}
+
+#submit:hover {
+    background-color: rgb(255, 56, 56);
+    cursor: pointer;
+}
+
+.note {
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    width: 100vw;
+    padding: 0;
+    text-align: center;
+    margin-top: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+}
