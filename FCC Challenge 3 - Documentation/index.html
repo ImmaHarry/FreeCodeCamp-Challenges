@@ -5,174 +5,176 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reddit Bot Documentation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav id="navbar">
         <header>Reddit Bot Documentation</header>
         <ul>
-          <li><a class="nav-link" href="#the_reddit_bot">The Reddit Bot?</a></li>
+          <li><a class="nav-link" href="#the_reddit_bot">The Reddit Bot</a></li>
           <li><a class="nav-link" href="#downloading_the_bot">Downloading the Bot</a></li>
           <li><a class="nav-link" href="#prerequisites">Prerequisites</a></li>
           <li><a class="nav-link" href="#get_your_reddit_key">Get your reddit key</a></li>
-          <li><a class="nav-link" href="#Variables">Getting the packages in place</a></li>
-          <li><a class="nav-link" href="#Declaring_variables">Installing SoX</a></li>
-          <li><a class="nav-link" href="#Variable_scope">Installing Playwright</a></li>
-          <li><a class="nav-link" href="#Global_variables">Running the bot</a></li>
-          <li><a class="nav-link" href="#Constants">Running the bot</a></li>
-          <li><a class="nav-link" href="#Data_types">Viewing the video</a></li>
-          <li><a class="nav-link" href="#if...else_statement">Final Words</a></li>
-          <li><a class="nav-link" href="#while_statement">Common Errors</a></li>
+          <li><a class="nav-link" href="#getting_the_packages_in_place">Getting the packages in place</a></li>
         </ul>
       </nav>
       <main id="main-doc">
         <section class="main-section" id="the_reddit_bot">
-            <header>The Reddit Bot?</header>
+            <header>The Reddit Bot</header>
             <p>We have all seen those Text To Speech videos on YouTube and TikTok, right? Well, those low effort videos can be completely automated now! Using this Reddit Bot, you can produce a high quality video that is TikTok and YouTube ready in less than 5 (to 10) minutes with almost no effort.</p>
-            <p>All the credit for this bot's development goes to Lewis Menelaws. Get in touch with Lewis and his server filled with a bunch of lovely developers <a href="https://discord.com/invite/5uw4eCQf6Z">here</a>. To check out the project on github (and maybe leave a star on it), <a href="https://github.com/elebumm/RedditVideoMakerBot">click here</a>.</p>
+            <p>All the credit for this bot's development goes to Lewis Menelaws. Get in touch with Lewis and his server filled with a bunch of lovely developers <a target="_blank" href="https://discord.com/invite/5uw4eCQf6Z">here</a>. To check out the project on github (and maybe leave a star on it), <a target="_blank" href="https://github.com/elebumm/RedditVideoMakerBot">click here</a>.</p>
             <p>This simple documentation will guide you through the installation process of the bot & its required source files and get you running in no time!</p>
+            <hr class="seperator">
         </section>
         <section class="main-section" id="downloading_the_bot">
             <header>Downloading the Bot</header>
             <p>To download the bot, and also view the source code, you need to download it from the GitHub page of Lewis Menelaws.</p>
-            <p>Start by visiting this <a href="https://github.com/elebumm/RedditVideoMakerBot">link</a>. Once you are there, you should see an option saying code.</p>
+            <p>Start by visiting this <a target="_blank" href="https://github.com/elebumm/RedditVideoMakerBot">link</a>. Once you are there, you should see an option saying code.</p>
             <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-f8e1f3f50db68af49ef34c54f3cecbf504d215e7%2Fimage.png?alt=media">
             <p>Once you click it, you should see three options:</p>
             <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-b6c68bc54e735f00a7710ae9974a344c8e5f90ee%2Fimage%20(1)%20(1)%20(1)%20(1).png?alt=media">
             <p>You can either <b>Clone the repo:</b></p>
-            <p>Using <b>Git</b>b:</p>
-            <code class="block-code">git clone https://github.com/elebumm/RedditVideoMakerBot.git</code>
+            <p>Using <b>Git</b>:</p>
+            <code class="code-block">git clone https://github.com/elebumm/RedditVideoMakerBot.git</code>
             <p>Using the <b>GitHub CLI</b>:</p>
-            <code class="block-code">gh repo clone elebumm/RedditVideoMakerBot</code>
+            <code class="code-block">gh repo clone elebumm/RedditVideoMakerBot</code>
             <p>There will be a new Directory in your current working directory called <code>RedditVideoMakerBot</code></p>
             <p>Using <b>GitHub Desktop</b>:</p>
             <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-a4633f77b3da4840d00ba562de0202e80d306eb2%2Fimage%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media">
             <p>The repo will appear in your GitHub desktop app.</p>
-            <p>or by downloading the zip</p>
             <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-902796aa8136846c9bf4c353e267e0e226bbc58b%2Fimage.png?alt=media">
+            <p>or by downloading the zip</p>
             <p>The download should start (on Firefox and similar you may need to confirm the download) and the files should be placed in your preferred location.</p>
             <p>Once done, unzip the files.</p>
+            <hr class="seperator">
         </section>
         <section class="main-section" id="prerequisites">
-            <title>Prerequisites</title>
+            <header>Prerequisites</header>
             <h3>Requirements:</h3>
             <ol>
-                <li>Python, version 3.7+.</li>
-                <li>Node.js.</li>
+                <li><u>Python, version 3.7+.</u></li>
+                <li><u>Node.js.</u></li>
+                <li>Patience</li>
+                <li>More Patience</li>
+                <li>Basic common sense</li>
+                <p>No but for real, please be patient!</p>
             </ol>
-            <hr>
+            <hr class="seperator">
             <h3>Python:</h3>
             <p>First of all, check if you have Python 3.6+ already installed by running <code>python3 --version</code> (if this does not work, try <code>python --version</code>).</p>
             <p>It returns the following output:</p>
-            <code class="block-code">Python 3.7.0</code>
+            <code class="code-block">Python 3.7.0</code>
             <p>Or anything above 3.7.0, than you can go to the next step.</p>
             <p>If it returns the following output:</p>
-            <code class="block-code">python3: command not found</code>
+            <code class="code-block">python3: command not found</code>
             <h4>Installing python on windows</h4>
-            <p>The easiest way to install Python on Windows is to use the <a href="https://www.python.org/downloads/windows/">Python for Windows installer.</a></p>
+            <p>The easiest way to install Python on Windows is to use the <a target="_blank" href="https://www.python.org/downloads/windows/">Python for Windows installer.</a></p>
             <p>When you install Python this way, you will see a checkbox at the bottom which says Add Python 3.10.x to PATH. Make sure you check this box, it is extremely crucial!</p>
             <img href="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-8a8807a3ac65d820bd949986745f2e9d0ed0cc52%2Fimage.png">
             <p>Alternatively, you can download python from the Microsoft Store (do not recommend, it's an outdated version and not supported by the official developers).</p>
-            <p>Finally, you can download python using a Package Manager (e.g. <a href="https://chocolatey.org/">Chocolatey</a>) by running the following command:</p>
+            <p>Finally, you can download python using a Package Manager (e.g. <a target="_blank" href="https://chocolatey.org/">Chocolatey</a>) by running the following command:</p>
             <code class="code-block">choco install python</code>
             <h4>Installing python on MacOS</h4>
-            <p>The easiest way to install Python 3.7+ on MacOS is to use the <a href="https://www.python.org/downloads/macos">Installer for Python.</a></p>
+            <p>The easiest way to install Python 3.7+ on MacOS is to use the <a target="_blank" href="https://www.python.org/downloads/macos">Installer for Python.</a></p>
             <p>Once you landed on the download page, click on Latest Python3 release. Then, go to the end of the page and click the <code>macOS 64-bit universal2 installer</code> button.</p>
             <p>Then, click the <code>Install</code> button until the installation is complete.</p>
             <p>Then, to check if everything is working, run the following command:</p>
             <code class="code-block">python3 --version</code>
             <p>It should return the following output:</p>
-            <code class="block-code">Python 3.7.0</code>
-            <p>You can also install Python on MacOS by using the <a href="https://brew.sh/">Homebrew</a> package manager.</p>
+            <code class="code-block">Python 3.7.0</code>
+            <p>You can also install Python on MacOS by using the <a target="_blank" href="https://brew.sh/">Homebrew</a> package manager.</p>
             <p>After installing Homebrew, run the following command:</p>
             <code class="code-block">brew install python@3.10</code>
             <h4>Installing python on Linux</h4>
             <p>Python can be installed by using your package manager (e.g. apt-get, yum, pacman, zypper etc.).</p>
-            <hr>
+            <hr class="seperator">
             <h3>Node.js:</h3>
             <p>NodeJS is a JavaScript runtime environment that is used to execute JavaScript code. It is needed to use playwright.</p>
             <p>Installing nodejs on Windows</p>
-            <p>You can download nodejs installer from the <a href="https://nodejs.org/en/download/">Node.js website</a>. Click the LTS version. This will download the latest stable version of nodejs.</p>
+            <p>You can download nodejs installer from the <a target="_blank" href="https://nodejs.org/en/download/">Node.js website</a>. Click the LTS version. This will download the latest stable version of nodejs.</p>
             <p>To check if node installed successfully, type <code>node</code> on your terminal to make sure node.js is installed correctly. You should see something like this:</p>
             <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-449471b5cadb82a45f9b86f0fa992bc7d92bde43%2Fimage.png?alt=media">
-            <p>You can also install nodejs on Windows by using the <a href="https://chocolatey.org">Chocolatey</a> package manager.</p>
+            <p>You can also install nodejs on Windows by using the <a target="_blank" href="https://chocolatey.org">Chocolatey</a> package manager.</p>
             <p>After installing Chocolatey, run the following command:</p>
             <code class="code-block">choco install nodejs</code>
             <h4>Installing nodejs on MacOS</h4>
-            <p>You can download nodejs installer from the <a href="https://nodejs.org/en/download/">nodejs website</a>. Click the LTS version. This will download the latest stable version of nodejs.</p>
+            <p>You can download nodejs installer from the <a target="_blank" href="https://nodejs.org/en/download/">nodejs website</a>. Click the LTS version. This will download the latest stable version of nodejs.</p>
             <p>To check if node installed successfully, type <code>node</code> on your terminal to make sure node.js is installed correctly. You should see something like this:</p>
-            <p>You can also install nodejs on MacOS by using the <a href="https://brew.sh/">Homebrew</a> package manager.</p>
+            <p>You can also install nodejs on MacOS by using the <a target="_blank" href="https://brew.sh/">Homebrew</a> package manager.</p>
             <p>After installing Homebrew, run the following command:</p>
             <code class="code-block">brew install nodejs</code>
             <h3>Installing nodejs on Linux</h3>
             <p>Install nodejs by using your package manager (e.g. apt-get, yum, pacman, zypper etc.).</p>
-            <hr>
             <p>Voila! You are done. 👍</p>
-            </section>
-            <section id="main-doc">
-                <header class="main-section" id="get_your_reddit_key">Get your reddit key</header>
-                <p>Head over to that folder where you have all the source files saved, rename the .env.template file to .env, you might get a prompt from windows, ignore it. Once you are done, right click the file and open it with Notepad, although any IDE can be used.</p>
-                <p>Once you open the notepad file, you should see:</p>
-                <img href="https://media.discordapp.net/attachments/982312549875867738/988786406581223424/unknown.png?width=881&height=670">
-                <p>The next step will be the most essential in this entire section. Avoid any errors here!</p>
-                <p>Head over to the apps page under the prefs page: <a href="https://www.reddit.com/prefs/apps">https://www.reddit.com/prefs/apps</a>. Once you are here, you should scroll down and see a button saying create another app... (it could be different if it's your first app), click it. Once you click it, you should see:</p>
-                <p><b>Name</b>: you can put in any name, for example: automated-bot</p>
-                <p><b>Radio Buttons</b>: where it shows you the three radio buttons, pick the third one, that is the script one.</p>
-                <p><b>Description</b>: put in anything, it does not matter.</p>
-                <p><b>About URL</b>: link any webpage like https://google.com.</p>
-                <p><b>Redirect URI</b>: link any webpage like https://google.com.</p>
-                <p>Great, you created the app! now you need to fill in the valules </p>
-                <img src="https://user-images.githubusercontent.com/66544866/173240642-af00257e-4414-4a57-a3be-24443ee7c29f.png">
-                <p>Copy the text under "personal use script", that is your REDDIT_CLIENT_ID, the text right next to SECRET is your REDDIT_CLIENT_SECRET <b>(DO NOT SHARE THIS WITH ANYONE)</b>.</p>
-                <p>The text where it says developers is your REDDIT_USERNAME and REDDIT_PASSWORD is your Reddit account's password. <b>Your information is not logged</b>.</p>
-                <p>Head over to your <code>.env</code> file and enter the <code>client ID, secret, username and password</code> within the <b>quotations</b>. Hit Ctrl+S to save the file. For the love of God, ensure there are no mistakes here.</p>
-            </section>
-            <section id="main-doc">
-                <header class="main-section">Getting the packages in place</header>
-                <h4>Windows</h4>
-                <p><b>If you download the zip</b></p>
-                <p>Head over to the folder where all the files are stored. Once you are there, you should see a bar at the top showing the directory's path. Double click that:</p>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-8b95a0a0ec03826a9823b049053edbe0b3e022f0%2Fimage.png?alt=media">
-                <p>Once you double click it, type cmd and press enter. You should see a Command Prompt window pop up that is placed inside your source folder.</p>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-95a929a27813812aff480982a6dc5a8e1275faea%2Fimage.png?alt=media">
-                <p>Once in, type: <code>pip3 install -r requirements.txt</code>. Word to word! Again, make sure you are in the directory. Give it a few minutes and let it download the packages. Once done, you should be seeing something like this:</p>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-e7cf67e738c4a2a5105fe3547916c791b7e5b466%2Fimage.png?alt=media">
-                <p><b>If you cloned the repo:</b></p>
-                <p>In the place where you initially cloned the repo, type this command:</p>
-                <code class="code-block">cd redditvideomakerbot</code>
-                <p>Once you are in the directory, type:</p>
-                <code class="code-block">pip3 install -r requirements.txt</code>
-                <hr>
-                <h4>MacOS:</h4>
-                <p>First, go to the folders where the code is stored.</p>
-                <p>If you downloaded the zip:</p>
-                <p>Go to the downloads folder:</p>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-1fd00c15041ce4051776e3330b4036ec7e6a1cc8%2Fimage%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media">
-                <p>Then, click finder > services > new terminal at folder:</p>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-a862b6c94e59f20502bfbb43f3d98a192fe060b4%2Fimage%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media">
-                <p>Once the terminal is opened, it should look something like this:</p>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-7a6a5ff8cae30bb0037eec6e08d5f1be2cc0b478%2Fimage%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media">
-                <p>Type in this command (or just copy it) <code>pip3 install -r requirements.txt</code>:</p>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-5491381a22b0b2c7deeece910a4c4e66102933ea%2Fgif%20(1).gif?alt=media">
-                <p><b>If you cloned the repo:</b></p>
-                <p>In the place where you initially cloned the repo, type this command:</p>
-                <code class="code-block">cd redditvideomakerbot</code>
-                <p>Once you are in the directory, type:</p>
-                <code class="code-block">pip3 install -r requirements.txt</code>
-                <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-5491381a22b0b2c7deeece910a4c4e66102933ea%2Fgif%20(1).gif?alt=media">
-                <hr>
-                <h4>Linux</h4>
-                <p>First go to the folders where the code is stored.</p>
-                <p><b>If you downloaded the zip:</b></p>
-                <p>Go to the downloads folder, then right click on the zip file and click "Open folder in terminal":</p>
-                <p>Then, type this command:</p>
-                <code class="code-block">pip3 install -r requirements.txt</code>
-                <p>And everything should be installed!</p>
-                <p><b>If you cloned the repo:</b></p>
-                <p>In the place where you initially cloned the repo, type this command:</p>
-                <code class="code-block">cd redditvideomakerbot</code>
-                <p>Once you are in the directory, type:</p>
-                <code class="code-block">pip3 install -r requirements.txt</code>
-            </section>
+            <hr class="seperator">
+        </section>
+        <section class="main-section" id="get_your_reddit_key">
+            <header>Get your reddit key</header>
+            <p>Head over to that folder where you have all the source files saved, rename the .env.template file to .env, you might get a prompt from windows, ignore it. Once you are done, right click the file and open it with Notepad, although any IDE can be used.</p>
+            <p>Once you open the notepad file, you should see:</p>
+            <img href="https://media.discordapp.net/attachments/982312549875867738/988786406581223424/unknown.png?width=881&height=670">
+            <p>The next step will be the most essential in this entire section. Avoid any errors here!</p>
+            <p>Head over to the apps page under the prefs page: <a target="_blank" href="https://www.reddit.com/prefs/apps">https://www.reddit.com/prefs/apps</a>. Once you are here, you should scroll down and see a button saying create another app... (it could be different if it's your first app), click it. Once you click it, you should see:</p>
+            <p><b>Name</b>: you can put in any name, for example: automated-bot</p>
+            <p><b>Radio Buttons</b>: where it shows you the three radio buttons, pick the third one, that is the script one.</p>
+            <p><b>Description</b>: put in anything, it does not matter.</p>
+            <p><b>About URL</b>: link any webpage like https://google.com.</p>
+            <p><b>Redirect URI</b>: link any webpage like https://google.com.</p>
+            <p>Great, you created the app! now you need to fill in the valules </p>
+            <img src="https://user-images.githubusercontent.com/66544866/173240642-af00257e-4414-4a57-a3be-24443ee7c29f.png">
+            <p>Copy the text under "personal use script", that is your REDDIT_CLIENT_ID, the text right next to SECRET is your REDDIT_CLIENT_SECRET <b>(DO NOT SHARE THIS WITH ANYONE)</b>.</p>
+            <p>The text where it says developers is your REDDIT_USERNAME and REDDIT_PASSWORD is your Reddit account's password. <b>Your information is not logged</b>.</p>
+            <p>Head over to your <code>.env</code> file and enter the <code>client ID, secret, username and password</code> within the <b>quotations</b>. Hit Ctrl+S to save the file. For the love of God, ensure there are no mistakes here.</p>
+            <hr class="seperator">
+        </section>
+        <section id="getting_the_packages_in_place" class="main-section">
+            <header>Getting the packages in place</header>
+            <h4>Windows</h4>
+            <p><b>If you download the zip</b></p>
+            <p>Head over to the folder where all the files are stored. Once you are there, you should see a bar at the top showing the directory's path. Double click that:</p>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-8b95a0a0ec03826a9823b049053edbe0b3e022f0%2Fimage.png?alt=media">
+            <p>Once you double click it, type cmd and press enter. You should see a Command Prompt window pop up that is placed inside your source folder.</p>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-95a929a27813812aff480982a6dc5a8e1275faea%2Fimage.png?alt=media">
+            <p>Once in, type: <code>pip3 install -r requirements.txt</code>. Word to word! Again, make sure you are in the directory. Give it a few minutes and let it download the packages. Once done, you should be seeing something like this:</p>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-e7cf67e738c4a2a5105fe3547916c791b7e5b466%2Fimage.png?alt=media">
+            <p><b>If you cloned the repo:</b></p>
+            <p>In the place where you initially cloned the repo, type this command:</p>
+            <code class="code-block">cd redditvideomakerbot</code>
+            <p>Once you are in the directory, type:</p>
+            <code class="code-block">pip3 install -r requirements.txt</code>
+            <hr class="seperator">
+            <h4>MacOS:</h4>
+            <p>First, go to the folders where the code is stored.</p>
+            <p>If you downloaded the zip:</p>
+            <p>Go to the downloads folder:</p>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-1fd00c15041ce4051776e3330b4036ec7e6a1cc8%2Fimage%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media">
+            <p>Then, click finder > services > new terminal at folder:</p>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-a862b6c94e59f20502bfbb43f3d98a192fe060b4%2Fimage%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media">
+            <p>Once the terminal is opened, it should look something like this:</p>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-7a6a5ff8cae30bb0037eec6e08d5f1be2cc0b478%2Fimage%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png?alt=media">
+            <p>Type in this command (or just copy it) <code>pip3 install -r requirements.txt</code>:</p>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-5491381a22b0b2c7deeece910a4c4e66102933ea%2Fgif%20(1).gif?alt=media">
+            <p><b>If you cloned the repo:</b></p>
+            <p>In the place where you initially cloned the repo, type this command:</p>
+            <code class="code-block">cd redditvideomakerbot</code>
+            <p>Once you are in the directory, type:</p>
+            <code class="code-block">pip3 install -r requirements.txt</code>
+            <img src="https://2326768646-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLTSXsH20083TuIFTQQhK%2Fuploads%2Fgit-blob-5491381a22b0b2c7deeece910a4c4e66102933ea%2Fgif%20(1).gif?alt=media">
+            <hr class="seperator">
+            <h4>Linux</h4>
+            <p>First go to the folders where the code is stored.</p>
+            <p><b>If you downloaded the zip:</b></p>
+            <p>Go to the downloads folder, then right click on the zip file and click "Open folder in terminal":</p>
+            <p>Then, type this command:</p>
+            <code class="code-block">pip3 install -r requirements.txt</code>
+            <p>And everything should be installed!</p>
+            <p><b>If you cloned the repo:</b></p>
+            <p>In the place where you initially cloned the repo, type this command:</p>
+            <code class="code-block">cd redditvideomakerbot</code>
+            <p>Once you are in the directory, type:</p>
+            <code class="code-block">pip3 install -r requirements.txt</code>
+            <hr class="seperator">
+        </section>
       </main>
 </body>
 </html>
